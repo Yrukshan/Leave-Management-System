@@ -136,7 +136,7 @@ leave-management-system/
 
 ### 📸 Screenshot :
 <br/>
-<img width="1919" height="967" alt="Screenshot 2026-03-21 140412" src="https://github.com/user-attachments/assets/9627016b-f671-4e66-9c30-73a28d1c7ca4" />
+<img width="1907" height="902" alt="Screenshot 2026-03-21 140412" src="https://github.com/user-attachments/assets/1e9d8802-6202-47d1-9a11-c92d944b5421" />
 <br />
 
 ### ⚠️ Common Issues :
