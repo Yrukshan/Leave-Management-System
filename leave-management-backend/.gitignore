@@ -1,0 +1,40 @@
+# Environment variables
+.env
+
+# Binaries
+*.exe
+*.out
+*.test
+
+# Build output
+bin/
+dist/
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE / Editor
+.vscode/
+.idea/
+
+# Go modules cache
+vendor/
+
+# Coverage
+coverage.out
+
+# Temporary files
+tmp/
+temp/
+
+# Binary (if built manually)
+main
+app
+
+# Go workspace files
+go.work
+go.work.sum
