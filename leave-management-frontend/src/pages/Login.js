@@ -20,6 +20,12 @@ function Login() {
   return (
     <div style={styles.container}>
       <div style={styles.card}>
+
+        {/* ✅ BACK BUTTON ADDED */}
+        <div style={styles.back} onClick={() => nav("/")}>
+          ← Back
+        </div>
+
         <h2 style={styles.title}>Welcome Back</h2>
         <p style={styles.subtitle}>Login to your account</p>
 
@@ -43,6 +49,15 @@ function Login() {
         <button style={styles.button} onClick={login}>
           Login
         </button>
+
+        {/* REGISTER LINK */}
+        <p style={styles.registerText}>
+          Don't have an account?{" "}
+          <span style={styles.registerLink} onClick={() => nav("/register")}>
+            Register
+          </span>
+        </p>
+
       </div>
     </div>
   );
@@ -59,8 +74,9 @@ const styles = {
   },
 
   card: {
+    position: "relative", // needed for back button
     background: "rgba(255,255,255,0.05)",
-    backdropFilter: "blur(10px)", // glass effect
+    backdropFilter: "blur(10px)",
     padding: "40px",
     borderRadius: "16px",
     display: "flex",
@@ -70,6 +86,16 @@ const styles = {
     boxShadow: "0 8px 30px rgba(0,0,0,0.3)",
     color: "white",
     textAlign: "center",
+  },
+
+  /* ✅ BACK BUTTON STYLE */
+  back: {
+    position: "absolute",
+    top: "10px",
+    left: "15px",
+    color: "#3b82f6",
+    cursor: "pointer",
+    fontSize: "14px",
   },
 
   title: {
@@ -104,6 +130,18 @@ const styles = {
     fontWeight: "bold",
     cursor: "pointer",
     transition: "0.3s",
+  },
+
+  registerText: {
+    marginTop: "10px",
+    fontSize: "14px",
+    color: "#94a3b8",
+  },
+
+  registerLink: {
+    color: "#3b82f6",
+    cursor: "pointer",
+    fontWeight: "bold",
   },
 };
 

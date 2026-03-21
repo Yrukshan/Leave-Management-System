@@ -6,13 +6,19 @@ import Users from "../pages/Users";
 
 import ProtectedRoute from "./ProtectedRoute";
 import DashboardRouter from "../pages/DashboardRouter";
+import Home from "../pages/Home";
+import Register from "../pages/Registre";
 
 function AppRoutes() {
   return (
     <BrowserRouter>
       <Routes>
 
-        <Route path="/" element={<Login />} />
+        <Route path="/" element={<Home />} />
+
+        <Route path="/register" element={<Register />} />
+
+        <Route path="/login" element={<Login />} />
 
         <Route
           path="/dashboard"
