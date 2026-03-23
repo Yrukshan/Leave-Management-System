@@ -111,7 +111,7 @@ leave-management-system/
 
 ### 🔌 API Endpoints :
 
-- Example :
+#### Example :
 
 - Auth:
 - POST /register
