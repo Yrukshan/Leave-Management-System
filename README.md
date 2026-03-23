@@ -50,10 +50,10 @@ A full-stack Leave Management System built using **Golang, React, and PostgreSQL
 ## 📂 Project Structure :
 
 leave-management-system/
-│
-├── backend/ # Golang API
-├── frontend/ # React App
-└── database/ # PostgreSQL (pgAdmin 4) 
+- │
+- ├── backend/ # Golang API
+- ├── frontend/ # React App
+- └── database/ # PostgreSQL (pgAdmin 4) 
 
 
 ---
@@ -111,7 +111,7 @@ leave-management-system/
 
 ### 🔌 API Endpoints :
 
--Example :
+- Example :
 
 - Auth:
 - POST /register
