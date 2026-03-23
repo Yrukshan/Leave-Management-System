@@ -39,7 +39,7 @@ A full-stack Leave Management System built using **Golang, React, and PostgreSQL
 - JWT Authentication
 
 ### Frontend :
-- React (Vite)
+- React 
 - Axios
 
 ### Database :
