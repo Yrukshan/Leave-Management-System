@@ -31,6 +31,7 @@ function AdminDashboard() {
   const totalLeaves = leaves.length;
   const pendingLeaves = leaves.filter((l) => l.status === "pending").length;
   const approvedLeaves = leaves.filter((l) => l.status === "approved").length;
+  const rejectedLeaves = leaves.filter((l) => l.status === "rejected").length; 
 
   // Pagination logic
   const indexOfLast = currentPage * itemsPerPage;
@@ -65,6 +66,11 @@ function AdminDashboard() {
           <div style={styles.card}>
             <h3>Approved</h3>
             <p>{approvedLeaves}</p>
+          </div>
+
+          <div style={styles.card}>
+            <h3>Rejected</h3> {/* new card */}
+            <p>{rejectedLeaves}</p>
           </div>
         </div>
 

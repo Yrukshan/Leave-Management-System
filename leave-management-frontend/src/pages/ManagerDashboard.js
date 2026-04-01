@@ -31,6 +31,7 @@ function ManagerDashboard() {
     const totalLeaves = leaves.length;
     const pendingLeaves = leaves.filter((l) => l.status === "pending").length;
     const approvedLeaves = leaves.filter((l) => l.status === "approved").length;
+    const rejectedLeaves = leaves.filter((l) => l.status === "rejected").length; // new
 
     // Pagination logic
     const indexOfLast = currentPage * itemsPerPage;
@@ -42,7 +43,7 @@ function ManagerDashboard() {
     return (
       <Layout>
         <div style={styles.container}>
-          <h2 style={styles.title}>Administrators Dashboard</h2>
+          <h2 style={styles.title}>Managers Dashboard</h2>
 
           {/* CARDS */}
           <div style={styles.cards}>
@@ -64,6 +65,11 @@ function ManagerDashboard() {
             <div style={styles.card}>
               <h3>Approved</h3>
               <p>{approvedLeaves}</p>
+            </div>
+
+            <div style={styles.card}>
+              <h3>Rejected</h3> {/* new card */}
+              <p>{rejectedLeaves}</p>
             </div>
           </div>
 
