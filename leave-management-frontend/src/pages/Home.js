@@ -79,19 +79,20 @@ const styles = {
     justifyContent: "space-between",
     alignItems: "center",
     padding: "20px 40px",
+    flexWrap: "wrap",
+    gap: "10px",
   },
 
   logo: {
     fontWeight: "bold",
   },
 
-  // NEW NAV ACTIONS
   navActions: {
     display: "flex",
     gap: "10px",
+    flexWrap: "wrap",
   },
 
-  // REGISTER BUTTON
   registerBtn: {
     padding: "8px 15px",
     background: "#22c55e",
@@ -174,6 +175,37 @@ const styles = {
     textAlign: "center",
     padding: "20px",
     color: "#94a3b8",
+  },
+
+  // Responsive adjustments
+  "@media (max-width: 768px)": {
+    navbar: {
+      padding: "15px 20px",
+      flexDirection: "column",
+      alignItems: "flex-start",
+    },
+    title: {
+      fontSize: "28px",
+    },
+    subtitle: {
+      fontSize: "14px",
+      maxWidth: "100%",
+    },
+    features: {
+      padding: "40px 20px",
+      gap: "15px",
+    },
+    card: {
+      padding: "15px",
+    },
+    primaryBtn: {
+      fontSize: "14px",
+      padding: "10px 16px",
+    },
+    secondaryBtn: {
+      fontSize: "14px",
+      padding: "10px 16px",
+    },
   },
 };
 

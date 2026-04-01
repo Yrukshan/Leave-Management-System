@@ -42,6 +42,7 @@ function AdminDashboard() {
   return (
     <Layout>
       <div style={styles.container}>
+
         <h2 style={styles.title}>Administrators Dashboard</h2>
 
         {/* CARDS */}
@@ -95,6 +96,7 @@ function AdminDashboard() {
         {/* PAGINATION */}
         <div style={styles.pagination}>
           <button
+            style={styles.button}
             onClick={() => setCurrentPage((p) => p - 1)}
             disabled={currentPage === 1}
           >
@@ -106,6 +108,7 @@ function AdminDashboard() {
           </span>
 
           <button
+            style={styles.button}
             onClick={() => setCurrentPage((p) => p + 1)}
             disabled={currentPage === totalPages}
           >
@@ -115,8 +118,8 @@ function AdminDashboard() {
 
         {/* QUICK ACTIONS */}
         <div style={styles.actions}>
-          <button>Manage Users</button>
-          <button>Manage Leaves</button>
+          <button style={styles.button}>Manage Users</button>
+          <button style={styles.button}>Manage Leaves</button>
         </div>
       </div>
     </Layout>
@@ -126,41 +129,42 @@ function AdminDashboard() {
 const styles = {
   container: {
     padding: "20px",
-    paddingTop: "80px", 
+    paddingTop: "80px",
     background: "#0f172a",
     color: "white",
-
-    
-    height: "calc(100vh - 60px)",
-    overflow: "hidden",
+    minHeight: "calc(100vh - 60px)",
+    overflowY: "auto", // allow scroll on mobile
     boxSizing: "border-box",
   },
 
   title: {
     marginBottom: "20px",
+    fontSize: "clamp(18px, 4vw, 24px)", // responsive text
   },
 
   cards: {
     display: "grid",
-    gridTemplateColumns: "repeat(auto-fit, minmax(150px, 1fr))",
+    gridTemplateColumns: "repeat(auto-fit, minmax(140px, 1fr))",
     gap: "15px",
   },
 
   card: {
     background: "#1e293b",
-    padding: "20px",
+    padding: "15px",
     borderRadius: "10px",
     textAlign: "center",
   },
 
   tableWrapper: {
     marginTop: "15px",
-    overflowY: "auto", 
+    overflowX: "auto", // horizontal scroll
+    overflowY: "auto",
     maxHeight: "250px",
   },
 
   table: {
     width: "100%",
+    minWidth: "400px", // prevent breaking
     borderCollapse: "collapse",
     background: "#1e293b",
   },
@@ -169,25 +173,40 @@ const styles = {
     padding: "10px",
     border: "1px solid #334155",
     background: "#020617",
+    fontSize: "14px",
   },
 
   td: {
     padding: "10px",
     border: "1px solid #334155",
+    fontSize: "14px",
   },
 
   pagination: {
     marginTop: "15px",
     display: "flex",
+    flexWrap: "wrap", // mobile wrap
     justifyContent: "center",
     alignItems: "center",
     gap: "10px",
+    textAlign: "center",
   },
 
   actions: {
     marginTop: "20px",
     display: "flex",
+    flexWrap: "wrap", // stack on small screens
     gap: "10px",
+    justifyContent: "center",
+  },
+
+  button: {
+    padding: "8px 14px",
+    borderRadius: "6px",
+    border: "none",
+    background: "#3b82f6",
+    color: "white",
+    cursor: "pointer",
   },
 };
 
